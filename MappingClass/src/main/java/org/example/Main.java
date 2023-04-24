@@ -18,7 +18,7 @@ public class Main {
 
         connecting.connect();
         System.out.println("Выберите нужную операцию: \n 1) Создать таблицу, 2) Записать данные, 3) Вывести данные, 4) Изменить данные, 5) Удалить данные");
-        Integer input = Integer.valueOf(scanner.nextLine());
+        Integer input = scanner.nextInt();
 
         if (input == 1) {
             PA.mapping(user, connecting);
