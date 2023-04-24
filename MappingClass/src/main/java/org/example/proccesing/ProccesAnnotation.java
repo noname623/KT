@@ -34,4 +34,14 @@ public class ProccesAnnotation extends Connecting {
         System.out.println(createTable);
         stmt.executeUpdate(createTable);
     }
+
+    public void deleteTable(Object o, Connecting conn) throws SQLException, ClassNotFoundException {
+        Statement stmt = conn.connect();
+        Class<? extends Object> clazz = o.getClass();
+        String tableName = clazz.getAnnotation(Table.class).name();
+
+        String deleteTable = "DROP TABLE " + tableName;
+        System.out.println(deleteTable);
+        stmt.executeUpdate(deleteTable);
+    }
 }

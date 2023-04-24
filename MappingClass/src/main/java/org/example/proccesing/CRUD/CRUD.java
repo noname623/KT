@@ -99,6 +99,7 @@ public class CRUD extends Connecting {
     public void delete(Object o, Connecting conn) throws SQLException, ClassNotFoundException, IllegalAccessException {
         StringBuilder stringBulder = new StringBuilder();
         Class<? extends Object> clazz = o.getClass();
+        String tableName = clazz.getAnnotation(Table.class).name();
         Statement stmt = conn.connect();
 
         for (Field i : clazz.getDeclaredFields()) {
@@ -111,7 +112,6 @@ public class CRUD extends Connecting {
                     break;
             }
         }
-        String tableName = clazz.getAnnotation(Table.class).name();
         String deleteTable = "DELETE FROM " + tableName + " WHERE " + stringBulder.toString().substring(0, stringBulder.length());
         System.out.println(deleteTable);
         stmt.executeUpdate(deleteTable);
