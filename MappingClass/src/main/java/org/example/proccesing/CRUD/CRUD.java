@@ -13,7 +13,7 @@ public class CRUD extends Connecting {
         StringBuilder stringBulder = new StringBuilder();
         Statement stmt = conn.connect();
         Class<? extends Object> clazz = o.getClass();
-                String tableName = clazz.getAnnotation(Table.class).name();
+        String tableName = clazz.getAnnotation(Table.class).name();
 
         for (Field i : clazz.getDeclaredFields()) {
             i.setAccessible(true);

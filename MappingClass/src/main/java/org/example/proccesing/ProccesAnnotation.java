@@ -35,4 +35,3 @@ public class ProccesAnnotation extends Connecting {
         stmt.executeUpdate(createTable);
     }
 }
-

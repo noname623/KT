@@ -11,7 +11,7 @@ public class Connecting {
     private static final String username = "root";
     private static final String password = "кщще";
 
-    public Statement connect() throws SQLException, ClassNotFoundException {
+    public Statement connect() throws ClassNotFoundException, SQLException {
         Class.forName(driver);
         Connection conn = DriverManager.getConnection(URL, username, password);
         Statement stmt = conn.createStatement();
