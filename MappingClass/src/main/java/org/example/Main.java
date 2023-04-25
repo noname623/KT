@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException, SQLException, ClassNotFoundException, IOException {
+    public static void main(String[] args) throws IllegalAccessException, SQLException, ClassNotFoundException {
         Scanner scanner = new Scanner(System.in);
         User user = new User(1L, "'Ivan'", 18);
         Connecting connecting = new Connecting();

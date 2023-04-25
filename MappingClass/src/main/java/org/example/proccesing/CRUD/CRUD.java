@@ -1,5 +1,6 @@
 package org.example.proccesing.CRUD;
 
+import org.example.annotatins.Column;
 import org.example.annotatins.Table;
 import org.example.proccesing.Connecting;
 
